@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ultimate Birthday Animation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Advanced Animations */
+    .super-zoom-spin {
+      opacity: 0;
+      transform: scale(0) rotate(0deg);
+      animation: superZoomSpin 2s ease-in-out forwards;
+    }
+
+    .flip-in {
+      opacity: 0;
+      transform: rotateY(90deg);
+      animation: flipIn 1.5s ease-in-out forwards;
+    }
+
+    .bounce-in {
+      opacity: 0;
+      transform: translateY(-200%);
+      animation: bounceIn 1s cubic-bezier(0.25, 1.25, 0.5, 1.5) forwards;
+    }
+
+    @keyframes superZoomSpin {
+      0% {
+        opacity: 0;
+        transform: scale(0) rotate(0deg);
+      }
+      50% {
+        opacity: 0.8;
+        transform: scale(1.2) rotate(180deg);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) rotate(360deg);
+      }
+    }
+
+    @keyframes flipIn {
+      0% {
+        opacity: 0;
+        transform: rotateY(90deg);
+      }
+      50% {
+        opacity: 0.7;
+        transform: rotateY(-20deg);
+      }
+      100% {
+        opacity: 1;
+        transform: rotateY(0deg);
+      }
+    }
+
+    @keyframes bounceIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-200%);
+      }
+      50% {
+        opacity: 1;
+        transform: translateY(10%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-r from-pink-400 via-red-400 to-yellow-400 min-h-screen flex flex-col items-center justify-center">
+  <!-- Main heading -->
+  <h1 class="text-5xl font-extrabold text-white mb-6 animate-bounce">Happy Birthday, ya toto! 💖</h1>
+  <!-- Start Button -->
+  <button id="start-btn" class="px-6 py-3 bg-white text-pink-700 rounded-lg shadow-xl hover:bg-gray-200 transition duration-300 font-bold">
+    Start the Celebration 🎉
+  </button>
+  <!-- Image container -->
+  <div id="image-container" class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 hidden">
+    <img src="/images/1.jpg" alt="Image 1" class="w-full rounded-lg shadow-lg">
+    <img src="/images/2.jpg" alt="Image 2" class="w-full rounded-lg shadow-lg">
+    <img src="/images/3.jpg" alt="Image 3" class="w-full rounded-lg shadow-lg">
+    <img src="/images/4.jpg" alt="Image 4" class="w-full rounded-lg shadow-lg">
+    <img src="/images/5.jpg" alt="Image 5" class="w-full rounded-lg shadow-lg">
+    <img src="/images/6.jpg" alt="Image 6" class="w-full rounded-lg shadow-lg">
+    <img src="/images/7.jpg" alt="Image 7" class="w-full rounded-lg shadow-lg">
+    <img src="/images/8.jpg" alt="Image 8" class="w-full rounded-lg shadow-lg">
+  </div>
+  <!-- Audio Element -->
+  <audio id="birthday-song" src="/01.Allem_Alby.mp3"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
